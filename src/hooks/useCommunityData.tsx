@@ -33,9 +33,11 @@ const useCommunityData=()=> {
                 ...prev,
                 mySnippets: snippets as CommunitySnippet[],
             }))
+            
 
         } catch(error){
             console.log("getMySnippets error",error)
+            setError(error.message)
         }
         setLoading(false)
     }
@@ -58,3 +60,4 @@ const useCommunityData=()=> {
 
 }
 export default useCommunityData
+
